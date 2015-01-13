@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping('/api')
 @Api(value = 'sendApplicationDetailsAndDecision', description = 'Send the loan application details and decision to the Reporting')
 class LoanDetailsController {
-    @RequestMapping(value = '/details', method = RequestMethod.POST)
+    @RequestMapping(value = '/details', method = RequestMethod.POST, headers = 'content-type:application/json')
     @ResponseBody
     HttpStatus onDetailsReceived() {
         return HttpStatus.OK;
