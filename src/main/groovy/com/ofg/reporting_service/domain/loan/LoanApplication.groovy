@@ -18,4 +18,8 @@ class LoanApplication {
     
     @Column(name = 'AMOUNT')
     BigDecimal amount
+    
+    @OneToOne
+    @JoinColumn(name = 'DECISION')
+    LoanDecision decision;
 }
