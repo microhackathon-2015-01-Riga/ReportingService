@@ -8,14 +8,14 @@ class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    Long id;
+    Long id
 
     @Column(name = "FIRST_NAME")
-    String firstName;
+    String firstName
 
     @Column(name = "LAST_NAME")
-    String lastName;
+    String lastName
 
     @Column(name = "AGE")
-    Integer age;
+    Integer age
 }
