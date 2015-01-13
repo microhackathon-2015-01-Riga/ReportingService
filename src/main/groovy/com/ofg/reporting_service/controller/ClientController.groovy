@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping('/api')
 @Api(value = 'notifyAboutNewClient', description = 'Notify the Reporting Service about a new client')
 class ClientController {
-    @RequestMapping(value = '/client', method = RequestMethod.POST, headers = 'content-type:application/json')
+    @RequestMapping(value = '/client', method = RequestMethod.POST)
     @ResponseBody
     HttpStatus onNewClient(@RequestParam(required = true) String firstName,
                            @RequestParam(required = true) String lastName,

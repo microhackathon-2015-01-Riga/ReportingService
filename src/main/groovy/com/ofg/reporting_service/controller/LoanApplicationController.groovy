@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping('/api')
 @Api(value = 'notifyAboutNewApplication', description = 'Notify the Reporting Service about a new loan application')
 class LoanApplicationController {
-    @RequestMapping(value = '/application', method = RequestMethod.POST, headers = 'content-type:application/json')
+    @RequestMapping(value = '/application', method = RequestMethod.POST)
     @ResponseBody
     HttpStatus onNewApplication(@RequestParam(required = true) String loanId,
                                 @RequestParam(required = true) String job,
